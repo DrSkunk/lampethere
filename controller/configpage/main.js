@@ -17,7 +17,7 @@ async function scan(event) {
   scanButton.disabled = true;
   scanButton.innerHTML = "Scanning...";
 
-  const response = await fetch("/scan");
+  const response = await fetch("/api/wifi/networks");
   const data = await response.json();
 
   if (data.length > 0) {
